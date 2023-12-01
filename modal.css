@@ -1,0 +1,92 @@
+/* FULLSCREEN POPUP WRAPPER */
+.popwrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5); /* DEIXAR FUNDO ESCURO */
+    display: none;
+}
+
+/* CENTER POPUP BOX */
+#popbox {
+    border: 1px solid var(--bg-trd);
+    border-radius: 10px;
+    box-shadow: 0 5px 7px -1px rgba(12,12,12,0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    min-height: 40vh;
+    background-color: #fff;
+    /* border-top: 7px solid  #42CF89; */
+}
+
+.zoom-in {
+    animation: zoomIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.zoom-out {
+    animation: zoomOut;
+    animation-timing-function: ease-out;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.75);
+    }
+    50%{
+        transform: translate(-50%, -50%) scale(0.85);
+    }
+    75%{
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+}
+@keyframes zoomOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50%{
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    75%{
+        transform: translate(-50%, -50%) scale(0.85);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(0.75);
+    }
+}
+
+.pos-db {
+    /* float: right; */
+    margin-top: 10px;
+}
+.pop-body {
+    margin: 0;
+    padding: 0;
+    min-height: 135px;
+    width: 80%;
+}
+
+#poptitle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .67em 0;
+    color: #1B3E6A;
+    text-align: center;
+}

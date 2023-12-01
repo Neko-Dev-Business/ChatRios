@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatRios</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="modal.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="loading.css" />
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+</head>
+
+<body>
+  <!-- <div class="loading"><label>Aguarde...</label></div> -->
+  <header>
+    <button id="btnLogout" name="btnLogout" title="Sair"><i class="fas fa-sign-out-alt"></i></button>
+    <h2 id="header-title">
+      <img class='header-logo' src='img/icon.png' alt='Logo ChatRios' /><span>ChatRios</span>
+    </h2>
+  </header>
+  <div id="chat-container">
+    <div id="chat">
+        <ul id="messages"></ul>
+    </div>
+
+</div>
+<div>
+  <form id="message-form">
+    <input id="message-input" type="text" placeholder="Digite aqui..." />
+    <button id="message-btn" type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+</form>
+</div>
+
+  <!-- CUSTOM DIALOG BOX: STARTmodal__config -->
+  <div class="popwrap">
+    <div id="popbox">
+      <form id="loginSignIn" name="loginSignIn" method="post">
+        <fieldset class="pop-body">
+          <legend class="login-title">
+            <h1 id="poptitle"><img class='header-logo' src='img/icon.png' alt='Logo ChatRios' /><span>ChatRios</h1>
+          </legend>
+          <div class="input">
+            <label for="emailUser" class="text"><strong><i class="fas fa-envelope"></i></strong></label>
+            <input type="email" name="email" id="emailUser" placeholder="seu@email.com" required title="Informe um email de acesso válido" />
+          </div>
+          <div class="input">
+            <label for="nomeUser" class="text"><strong><i class="fas fa-user"></i></strong></label>
+            <input type="text" name="nomeUser" id="nomeUser" placeholder="Nome de Usuário" required title="Informe um nome de usuário" />
+          </div>
+          <div class="input">
+            <label for="passUser" class="text"><strong><i class="fas fa-unlock-alt"></i></strong></label>
+            <input type="password" name="password" id="passUser" placeholder="Senha" required title="Informe a senha do email de acesso" />
+          </div>
+          <div class="btn">
+            <button type="button" id="btnSubmit" name="btnSubmit" title="Login"><i class="fas fa-sign-out-alt"></i> Entrar</button>
+            <button type="button" id="btnRegister" title="Registrar">Registrar</button>
+            <button type="button" id="btnPassword" name="btnPassword" title="Recuperar Senha">Recuperar Senha</button>
+          </div>
+          <!-- <button type="button" id="fechar">Fechar</button> -->
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- CUSTOM DIALOG BOX: ENDmodal__config -->
+  <script src="loading.js"></script>
+  <!-- <script src="https://api.dicebear.com/7.x/adventurer-neutral/svg"></script> -->
+  <!-- <script type="module" crossorigin="anonymous" src="avatar.js"></script> -->
+  <script type="module" src="main.js"></script>
+  <script src="fontawesome.js"></script>
+
+
+</body>
+
+</html>
